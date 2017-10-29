@@ -10,19 +10,114 @@
             ---
             title: "JS Module 2 - Arrays"
             author: "Social Hackers Code School"
-            created: "Sun Oct 29 2017 11:30:23 GMT+0200 (EET)"
+            created: "Sun Oct 29 2017 15:48:06 GMT+0200 (EET)"
             original:
                 title: "JS Module 2 - Arrays"
                 url: "file:///Users/Pouianou/projects/kajero-notebooks/social_hackers/js_week_2/arrays.html"
             show_footer: false
             ---
 
-            ## Functions
+            ## Arrays
 
-            #### 1. Definition and declaration
+            #### 1. Definition
+            - Arrays are special objects used to store sequences of values.
+            - All arrays are instances of the global Array object.
+            - Arrays have typeof === 'object' and are instanceof Array
+            - Arrays can hold any type of value, including other arrays
+
+            ```javascript; runnable
+            const fruit = ['apple', 'banana', 'orange'];
+
+            const numbers = [1, 2, 3];
+
+            const arrays = [fruit, numbers];
+
+            console.log(arrays);
+            ```
+
+            #### 2. Array length
+
+            - Arrays can hold any number of elements. The number of elements in an array is called the array _length_. It is in fact a property on the Array object, and unlike the index, is 1-based.
+            - The Array.length property returns the nuber of element sin the array.
+
+            ```javascript; runnable
+            const fruits = ['apple', 'banana', 'orange'];
+
+            console.log(`I have ${fruits.length} fruits`);
+            ```
+
+            #### 3. Array index
+
+            - Arrays 'remember' the position of each element, and represent this position through a (0-based) number called _index_. The index can be used to directly refference array elements.
+            - The Array.indexOf(element) function returns the index of a given element.
+
+            ```javascript; runnable
+            const fruits = ['apple', 'banana', 'orange'];
+
+            const first = fruits[0];
+
+            const last = fruits[length - 1];
+
+            const myFruit = fruits[1];
+
+
+            console.log(`The first fruit is ${first},\
+            the last fruit is ${last},\
+            but my favourite fruit is ${myFruit}.`);
+            ```
+
+            #### 4. Adding elements with Array.push() and Array.unshift()
+
+            - Array.push() adds an element at the _end_ of the array.
+            - Array.unshift() adds an element at the start of the array.
+
+            ```javascript; runnable
+            const fruits = ['apple', 'banana', 'orange'];
+
+            fruits.push('pear');
+            fruits.unshift('mango');
+
+            console.log(fruits);
+            ```
+
+            #### 5. Removing elements with Array.pop() and Array.shift()
+
+            - Array.pop() removes the _last_ element from an array, and returns the element.
+            - Array.shift() removes the _first_ element from an array, and returns the element.
+
+            ```javascript; runnable
+            const fruits = ['apple', 'banana', 'orange'];
+
+            console.log(`The first fruit is ${fruits[0]}.`);
+
+            const first = fruits.shift();
+
+            console.log(`Removed ${first}.\
+             The first fruit is now ${fruits[0]}.`);
+
+
+            console.log(`The last fruit is ${fruits[fruits.length - 1]}.`);
+
+            const last = fruits.pop();
+
+            console.log(`Removed ${last}.\
+             The last fruit is now ${fruits[fruits.length - 1]}.`);
+            ```
+
+            #### 6. Removing all elements from an array
+
+            - Many ways to do this (can you think of some?)
+            - TL;DR - use Array.length = 0;
+
+            ```javascript; runnable
+            const fruits = ['apple', 'banana', 'orange'];
+
+            fruits.length = 0;
+
+            console.log(fruits);
+            ```
         </script>
         <div id="kajero"></div>
         <script type="text/javascript" src="http://www.joelotter.com/kajero/dist/bundle.js"></script>
     </body>
 </html>
-
