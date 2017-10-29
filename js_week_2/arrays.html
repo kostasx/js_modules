@@ -10,7 +10,7 @@
             ---
             title: "JS Module 2 - Arrays"
             author: "Social Hackers Code School"
-            created: "Sun Oct 29 2017 15:48:06 GMT+0200 (EET)"
+            created: "Sun Oct 29 2017 16:04:28 GMT+0200 (EET)"
             original:
                 title: "JS Module 2 - Arrays"
                 url: "file:///Users/Pouianou/projects/kajero-notebooks/social_hackers/js_week_2/arrays.html"
@@ -115,6 +115,39 @@
             fruits.length = 0;
 
             console.log(fruits);
+            ```
+
+            #### 7. Copying parts of an array with Array.slice()
+
+            - Array.slice(begin, end) will return a copy of a part of an array, starting from the element at the 'begin' index (inclusive), and up to the element at the 'end' index (exclusive).
+            - If no arguments are passed the function will return a shallow copy of the entire array.
+            - Array.slice() does not mutate the original array.
+
+            ```javascript; runnable
+            const numbers = [1, 2, 3, 4, 5];
+
+            const lastTwo = numbers.slice(3);
+
+            const firstTwo = numbers.slice(0, 2);
+            console.log(`The first two numbers are ${firstTwo}. The last two numbers are ${lastTwo}.`);
+            ```
+
+            ```javascript; runnable
+            let fruits = ['apple', 'banana', 'orange'];
+
+            const copy1 = fruits;
+
+            const copy2 = fruits;
+
+            const copy3 = fruits.slice();
+
+            fruits = [];
+
+            console.log(copy1);
+            console.log(copy2);
+            console.log(copy3);
+            console.log(copy1 === copy2);
+            console.log(copy1 === copy3);
             ```
         </script>
         <div id="kajero"></div>
