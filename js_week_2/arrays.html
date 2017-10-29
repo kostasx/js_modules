@@ -10,7 +10,7 @@
             ---
             title: "JS Module 2 - Arrays"
             author: "Social Hackers Code School"
-            created: "Sun Oct 29 2017 16:04:28 GMT+0200 (EET)"
+            created: "Sun Oct 29 2017 17:28:32 GMT+0200 (EET)"
             original:
                 title: "JS Module 2 - Arrays"
                 url: "file:///Users/Pouianou/projects/kajero-notebooks/social_hackers/js_week_2/arrays.html"
@@ -133,6 +133,7 @@
             ```
 
             ```javascript; runnable
+            // Example of shallow copy
             let fruits = ['apple', 'banana', 'orange'];
 
             const copy1 = fruits;
@@ -148,6 +149,65 @@
             console.log(copy3);
             console.log(copy1 === copy2);
             console.log(copy1 === copy3);
+            ```
+
+            ```javascript; runnable
+            // Example of deep vs shallow copy
+            let fruits = ['apple', 'banana', 'orange'];
+
+            let meats = ['chicken', 'lamb'];
+
+            let basket = [fruits, meats, 'milk'];
+
+            const copy = basket.slice();
+
+            basket[2] = 'eggs';
+            basket[1] = ['apple', 'banana'];
+
+            console.log(copy);
+            ```
+
+            #### 8.1 Deleting parts of an array with Array.splice()
+
+            - Array.splice() can be used to delete entire parts of an array.
+            - Array.splice() takes two arguments, _begin_, and _count_.
+            - Array.plice() returns an array containing the removed elements.
+            - **Unlike Array.slice(), Array.splice() _mutates_ the original array!**
+
+            ```javascript; runnable
+            const fruits = ['apple', 'banana', 'orange'];
+
+            function truncate(array, count) {
+              return array.splice(array.length - count, count);
+            }
+
+            const lastTwo = truncate(fruits, 2);
+
+            console.log(lastTwo);
+            console.log(fruits);
+            ```
+
+            #### 8.2 Adding and replacing elements with Array.splice()
+
+            - By passing elements as argument to Array.splice() after the _begin_ and _count_ arguments
+            - If we pass some elements as arguments, and the count argument is also === 0, then the provided element are simply added to the array.
+
+            ```javascript; runnable
+            // Replacing an existing element with a new one
+            const fruits = ['apple', 'banana', 'orange'];
+
+            fruits.splice(1, 2, 'tangerine');
+
+            console.log(fruits);
+            ```
+
+            ```javascript; runnable
+            // Adding a new element to the array
+            const fruits = ['apple', 'banana', 'orange'];
+
+            fruits.splice(1, 0, 'tangerine');
+
+            console.log(fruits);
             ```
         </script>
         <div id="kajero"></div>
