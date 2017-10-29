@@ -1,10 +1,10 @@
 ---
-title: "JavaScript Module 2"
+title: "JS Module 2 - Functions"
 author: "Social Hackers Code School"
 created: "Sun Oct 29 2017 11:30:23 GMT+0200 (EET)"
 original:
-    title: "JavaScript Module 2"
-    url: "file:///Users/Pouianou/projects/kajero-notebooks/social_hackers/js_week_2/week2.html"
+    title: "JS Module 2 - Functions"
+    url: "file:///Users/Pouianou/projects/kajero-notebooks/social_hackers/js_week_2/functions.html"
 show_footer: false
 ---
 
