@@ -10,7 +10,7 @@
             ---
             title: "JS Module 2 - Arrays"
             author: "Social Hackers Code School"
-            created: "Sun Oct 29 2017 17:28:32 GMT+0200 (EET)"
+            created: "Sun Oct 29 2017 17:57:36 GMT+0200 (EET)"
             original:
                 title: "JS Module 2 - Arrays"
                 url: "file:///Users/Pouianou/projects/kajero-notebooks/social_hackers/js_week_2/arrays.html"
@@ -208,6 +208,69 @@
             fruits.splice(1, 0, 'tangerine');
 
             console.log(fruits);
+            ```
+
+            #### 9. Mapping arrays with Array.map()
+
+            - Array.map() returns a new array that holds all the values that are the result of executing a function passed as an argument, on the elements of the original (calling) array.
+            - Array.map() is super powerful and often used.
+
+
+            ```javascript; runnable
+            // Example 9.1
+            const fruits = ['apple', 'banana', 'orange'];
+
+            function getIndices(array) {
+              return array.map(function(element) {
+                return array.indexOf(element);
+              });
+            }
+
+            const indices = getIndices(fruits);
+
+            console.log(indices);
+            ```
+
+            ```javascript; runnable
+            // Example 9.2
+            const fruits = [
+              {
+                name: 'apple',
+                color: 'red'
+              },
+              {
+                name: 'banana',
+                color: 'yellow'
+              },
+              {
+                name: 'orange',
+                color: 'orange'
+              }
+            ]
+
+            function getFruitColors(fruitCollection) {
+              return fruitCollection.map(function (fruit) {
+                return fruit.color;
+              });
+            }
+
+            console.log(getFruitColors(fruits));
+            ```
+
+            #### 10. String manipulation with Array.join() and String.split()
+
+            - Array.join(separator) returns a string containing all the elements in the array, joined by a separator passed as an _argument_. The separator _defaults_ to comma (',').
+            - String.split(separator) splits a string into multiple strings, based on a given separator. If no separator is passed as an argument, the original string is returned as is.
+            - Array.join() and String.split() do not have side effects.
+
+            ```javascript; runnable
+            const phrase = 'Never gonna give you up';
+            const words = phrase.split(' ');
+            const commaPhrase = words.join(',');
+
+            console.log(phrase);
+            console.log(words);
+            console.log(commaPhrase);
             ```
         </script>
         <div id="kajero"></div>
