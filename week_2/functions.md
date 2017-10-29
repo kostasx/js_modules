@@ -88,7 +88,7 @@ greet('Hello', 'there', 'Mr.', 'Bond');
 greet('Bond', 'James', 'Hi');
 ```
 
-- Functions can have define _default values_ for their parameters:
+- Functions can define _default values_ for their parameters:
 
 ```javascript; runnable
 function greetUser(userName) {
