@@ -12,8 +12,8 @@ show_footer: false
 
 #### 1. Definition
 - Arrays are special objects used to store sequences of values.
-- All arrays are instances of the global Array object.
-- Arrays have typeof === 'object' and are instanceof Array
+- All arrays are instances of the global `Array` object.
+- Arrays have `typeof === 'object'` and are `instanceof` Array
 - Arrays can hold any type of value, including other arrays
 
 ```javascript; runnable
